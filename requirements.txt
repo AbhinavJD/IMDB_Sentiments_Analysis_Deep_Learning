@@ -1,0 +1,7 @@
+numpy
+bs4
+torch == 2.0.0
+keras
+tensorflow == 2.12.0
+transformers
+tokenizers

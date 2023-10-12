@@ -1,0 +1,70 @@
+**Speech and Audio Recognition Application**
+
+## Overview
+COMP47650 - Term Project (IMDB Movie Review- Sentiment Analysis)
+The objective of this project is to develop a machine learning model that can accurately predict the sentiment of a given movie review as either positive or negative. This involves processing and analyzing large volumes of text data, implementing machine learning algorithms, and evaluating the performance of the models. The project provides an opportunity for students to develop their skills in natural language processing, machine learning, and data analysis.
+
+
+Since moodle allows only 500 mb file to download, i've uploaded on drive.
+Model checkpoint drive URL: https://drive.google.com/drive/folders/1O-vtIV7ttd_zc38hBm_HnWI4tt3HBu-2?usp=sharing
+---
+
+## Requirements
+
+Dataset will be found here: https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews/download?datasetVersionNumber=1
+
+Also please install requirements.txt initially, main_file.ipynb has already install all the prerequired from requirements.txt
+1. numpy
+2. bs4
+3. torch
+4. keras
+5. tensorflow
+6. transformers
+7. tokenizers
+---
+
+## Installation & Launching application
+
+
+1. Install the required dependencies using pip install -r requirements.txt.
+2. Run the jupyter notebook either local or in google colab.
+3. Please make sure to give proper path for folder and drives.
+4. default folder location code is already present in the main_file.ipynb file.
+5. Make sure to take all the values for lstm from config.ymal file
+---
+## Directory Structure
+C:.
+├───.ipynb_checkpoints
+├───checkpoints
+│   ├───distlbert
+│   └───gpt
+├───figs
+├───IMDB Dataset.csv
+├───logs
+│   ├───bert
+│   └───gpt
+├───models
+├───saved_models
+│   ├───bert
+│   └───gpt
+└───utils
+    ├───.ipynb_checkpoints
+    └───__pycache__
+
+
+---
+
+## Contributing
+
+If you would like to contribute to this project, please fork the repository and submit a pull request.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+---
+
+# Directory Structure
+The directory structure for this project is as follows:

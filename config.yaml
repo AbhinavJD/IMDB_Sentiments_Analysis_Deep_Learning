@@ -1,0 +1,78 @@
+dataset:
+  local_path: 'IMDB Dataset.csv'
+  google_drive_path: '/content/drive/MyDrive/Deep Learning (COMP47650)/Term_project/'
+
+pre_trained_model_GPT:
+  modelName: 'gpt2'
+  tokenizer_pad_config:
+    pad: '[PAD]'
+  tokenizer_config:
+    add_special_tokens: True 
+    padding: 'max_length'
+    truncation: True
+    max_length: 256
+    return_tensors: 'pt'
+
+pre_trained_model_BERT:
+  modelName: 'bert-base-uncased'
+  num_labels: 2
+  tokenizer_config:
+    add_special_tokens: True
+    padding: 'max_length'
+    max_length: 512
+    return_tensors: 'pt'
+
+fig_folder:
+  folder_path: 'figs/'
+
+split_dataset:
+  train_validate_ratio: 0.3
+  test_validate_ratio: 0.1
+  random_state: 2023
+
+bert_training_model:
+  pre_trained_model_name: 'distilbert-base-uncased'
+  tokernizer_name: 'distilbert-base-uncased'
+  checkpoint_path: 'checkpoints/bert/'
+  log_folder: 'logs/bert/'
+  activation: 'sigmoid'
+  loss: 'binary_crossentropy'
+  fast_token_path: 'utils/vocab.txt'
+
+gpt_training_model:
+  pre_trained_model_name: 'gpt2'
+  tokernizer_name: 'gpt2'
+  checkpoint_path: 'checkpoints/gpt/'
+  log_folder: 'logs/gpt/'
+  activation: 'sigmoid'
+  loss: 'binary_crossentropy'
+  fast_token_path: 'utils/vocab.txt'
+
+lstm_training_model:
+  checkpoint_path: 'checkpoints/lstm/'
+  log_folder: 'logs/lstm/'
+  optimizer: 'adam'
+  loss: 'binary_crossentropy'
+  metrics: 'accuracy'
+  recurrent_activation: sigmoid
+  vocab_size: 5000
+  max_len: 550
+  training:
+    bathsize: 32
+    epoch_first: 5
+    epoch_second: 10
+  embedding:
+    output_dim: 128
+  lstm:
+    activation: 'tanh'
+    units: 128
+    dropout: 0.2
+    recurrent_dropout: 0.2
+    recurrent_activation : 'sigmoid'
+  dense:
+    units: 1
+    activation: 'sigmoid'
+  tokenization:
+    num_words: 700
+    maxlen: 550
+
